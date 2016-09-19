@@ -1,0 +1,151 @@
+
+/*Position of footer*/
+.container{min-height: calc(100vh - 16.4rem);}
+/*container's components*/
+.container.components{margin: 0;}
+.row.nowrap{
+  justify-content: flex-start;
+  position: relative;
+  right: 20px;
+  flex-wrap: nowrap;
+  padding-top:60px;
+  margin: 0px;
+  transition: 1s;
+}
+/*Index title*/
+#main-title{text-shadow: 0px -4px 5px rgba(0, 0, 0, 0.3);}
+/*index download button*/
+.descargar{
+  font-size: 2.8em;
+  height: 85px;
+  transition: 0.3s;
+}
+.descargar:hover{
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+  background:#00bcd4;
+}
+#download{text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);}
+#download:hover{
+  text-decoration: none;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+/*Github Repository*/
+#github{font-size: 3em;}
+#github>a{color:black;}
+#github>a:hover{text-decoration:none;}
+/*Dropbox download*/
+#dropbox{font-size: 3em;}
+#dropbox>a{color: #2196F3;}
+#dropbox>a:hover{text-decoration: none;}
+/*Footer Styles*/
+footer a{color: white;}
+footer input[type=button]{
+  position: relative;
+  top: 20px;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+/*components menu*/
+aside{
+  border-right: 1px solid black;
+  width: 320px;
+  position: fixed;
+  top: 60px;
+  left: 20px;
+  overflow: auto;
+  height: 100%;
+}
+aside ul{list-style: none;}
+aside ul li{margin-bottom: 0.88rem}
+aside ul ul{margin: 0.5rem 0rem 0.5rem 1.5rem;}
+aside a{color: black;}
+
+/*Lista de clases(navbar)*/
+.nav-class{
+  list-style: none;
+  position: relative;
+  left: 2%;
+  top:5%;
+}
+/*Estilos generales*/
+pre{overflow:auto;}
+blockquote>code{background: #fff;}
+/*Clases Genericas*/
+.title{text-shadow: 0px -4px 5px rgba(0, 0, 0, 0.3);}
+.subtitle{margin-top:100px ; text-shadow: 0px -1px 5px rgba(0, 0, 0, 0.5);}
+.span{margin-top: 60px;display: block;}
+.bold{font-weight: bold;}
+.note{margin: 30px 0;}
+.img-responsive{width: 100%;}
+
+/*== Estilos para los ejemplos ==*/
+.example-01{
+  background: lightgray;
+  box-sizing: border-box;
+}
+.example-01 .row{
+  background: gray;
+  box-sizing: border-box;
+}
+.example-01 .row .col{
+  height: 50px;
+  background: cornflowerblue;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.example-02{
+  background: lightgray;
+  box-sizing: border-box;
+}
+.example-02 .row .col{
+  background: cornflowerblue;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.example-03{
+  background: lightgray;
+  box-sizing: border-box;
+}
+.example-03 .row .column{
+  background: gray;
+  margin: 10px 0;
+}
+
+.example-04{
+  background: lightgray;
+  box-sizing: border-box;
+}
+.example-04 .row .col{
+  background: gray;
+  margin: 10px 0;
+}
+
+/*=== Media Query's ===*/
+@media screen and (max-width:1000px) {
+  .row.nowrap{
+    justify-content: space-around;
+    right: 0px;
+  }
+}
+@media screen and (min-width:1700px){
+  .row.nowrap{justify-content: space-around;}
+}
+@media screen and (max-width:1024px) {
+  aside.show-only-desktop{display: none;}
+}
+@media screen and (max-width:500px){
+  #dropbox, #github{margin: 20px 0;}
+}
+
+/*=== Estilos para Examples.html*/
+.example-box{
+  transition: 0.3s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.example-box:hover{box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.5);}
+.example-box>a{color: black;}
+.example-box>a:hover{text-decoration: none;}
+.example-box .subtitle{margin-top: 30px;}

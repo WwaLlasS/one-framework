@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Framework CSS - Componentes</title>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/framework.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar fixed gray z-index-2">
+      <a href="/" class="logo">Framework CSS</a>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="components.html">Componentes</a></li>
+        <li><a href="examples.html">Ejemplos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="row reverse nowrap">
+    <main class="container components">
+      <div class="row">
+        <h1 class="title">Componentes</h1>
+      </div>
+      <section id="main-container">
+        <h5 class="subtitle">Contenedor principal</h5>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            El Framework cuenta con un contenedor principal ajustado para tener 960px de ancho y posicionarce en el centro de la pantalla,
+            para obtener este contenedor basta con utilizar la clase <code>container</code> en una
+            etiqueta <code>&lt;div&gt;</code> o  <code>&lt;main&gt;</code>.
+          </p>
+        </div>
+        <span class="span bold">Ejemplo:</span>
+        <div class="row">
+          <div class="col sm-12 md-12 lg-12">
+            <pre>
+
+              &lt;main class="container"&gt;
+                &lt;!-- Contenido principal de el sitio --&gt;
+              &lt;/main&gt;
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section id="grid-system">
+        <h5 class="subtitle">Sistema de grid</h5>
+        <span class="span bold" id="row-container">Contenedor fila</span>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            El Grid system esta hecho a 12 columnas y para poder usarlo tenemos que declarar un contenedor
+            <code>&lt;div&gt;</code> con la clase <code>row</code> el cual será nuestra fila, y dentro del contenedor podemos declarar nuestras columnas, ejemplo:
+          </p>
+        </div>
+        <span class="span bold">Ejemplo:</span>
+        <div class="row">
+          <div class="col sm-12 md-12 lg-12">
+            <pre>
+
+              &lt;main class="container"&gt; &lt;!-- Contenedor principal de 960px --&gt;
+                &lt;div class="row"&gt; &lt;!-- Contenedor fila --&gt;
+                  &lt;div class="col sm-12 md-1 lg-1">1&lt;/div&gt; &lt;!-- Columnas --&gt;
+                  &lt;div class="col sm-12 md-1 lg-1"&gt;2&lt;/div&gt;
+                  &lt;div class="col sm-12 md-1 lg-1"&gt;3&lt;/div&gt;
+                  &lt;div class="col sm-12 md-1 lg-1"&gt;4&lt;/div&gt;
+                  &lt;div class="col sm-12 md-1 lg-1"&gt;5&lt;/div&gt;
+                  &lt;div class="col sm-12 md-1 lg-1"&gt;6&lt;/div&gt;
+                  &lt;div class="col sm-12 md-1 lg-1"&gt;7&lt;/div&gt;
+                  &lt;div class="col sm-12 md-1 lg-1"&gt;8&lt;/div&gt;
+                  &lt;div class="col sm-12 md-1 lg-1"&gt;9&lt;/div&gt;
+                  &lt;div class="col sm-12 md-1 lg-1"&gt;10&lt;/div&gt;
+                  &lt;div class="col sm-12 md-1 lg-1"&gt;11&lt;/div&gt;
+                  &lt;div class="col sm-12 md-1 lg-1"&gt;12&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/main&gt;
+            </pre>
+          </div>
+        </div>
+        <span class="span bold">Resultado:</span>
+        <div class="row">
+          <div class="container column example-01">
+            <h3 class="text-center">Contenedor principal de 960px de ancho</h3>
+            <div class="row">
+              <h2>Fila</h2>
+            </div>
+            <div class="row ">
+              <div class="col sm-12 md-1 lg-1">1</div>
+              <div class="col sm-12 md-1 lg-1">2</div>
+              <div class="col sm-12 md-1 lg-1">3</div>
+              <div class="col sm-12 md-1 lg-1">4</div>
+              <div class="col sm-12 md-1 lg-1">5</div>
+              <div class="col sm-12 md-1 lg-1">6</div>
+              <div class="col sm-12 md-1 lg-1">7</div>
+              <div class="col sm-12 md-1 lg-1">8</div>
+              <div class="col sm-12 md-1 lg-1">9</div>
+              <div class="col sm-12 md-1 lg-1">10</div>
+              <div class="col sm-12 md-1 lg-1">11</div>
+              <div class="col sm-12 md-1 lg-1">12</div>
+            </div>
+          </div>
+        </div>
+        <span class="span"></span>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            Como viste en el ejemplo anterior, se hace uso de la clase <code>col</code> y la clase <code>lg</code>,
+            la clase <code>col</code> declara que es una columna y la clase <code>lg</code> declara el tamaño de las columnas.
+          </p>
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            Para los tamaños de las columnas existen tres clases, las cuales nos permiten controlar los tamaños en base al tamaño
+            de la pantalla del dispotivos desde donde de visualiza el sitío, la clase para dispositivos con resolución de hasta 414px de ancho(<em>Smartphones</em>) es <code>sm</code>,
+            para dispositivos con resolución de hasta 768px de ancho(<em>Tablets</em>)  es <code>md</code> y para dispositivos de escritorio o laptops es <code>lg</code>.
+          </p>
+          <blockquote class="text-justify note">
+            <strong>Nota:&nbsp;</strong>Recuerda que debes escribir la clase para el tamaño de pantalla deseado(<code>sm</code>, <code>md</code>, <code>lg</code>)
+            seguido de un guión y el numero de columnas que quieras que ocupe tu contenedor.
+          </blockquote>
+        </div>
+        <span class="span bold">Ejemplo:</span>
+        <div class="row">
+          <div class="col sm-12 md-12 lg-12">
+            <pre>
+
+              &lt;main class="container"&gt; &lt;!-- Contenedor principal de 960px --&gt;
+                &lt;div class="row"&gt;
+                  &lt;div class="col sm-12 md-4 lg-1 text-center"&gt;sm-12 md-4 lg-1&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-1 text-center"&gt;sm-12 md-4 lg-1&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-1 text-center"&gt;sm-12 md-4 lg-1&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-1 text-center"&gt;sm-12 md-4 lg-1&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-1 text-center"&gt;sm-12 md-4 lg-1&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-1 text-center"&gt;sm-12 md-4 lg-1&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-1 text-center"&gt;sm-12 md-4 lg-1&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-1 text-center"&gt;sm-12 md-4 lg-1&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-1 text-center"&gt;sm-12 md-4 lg-1&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-1 text-center"&gt;sm-12 md-4 lg-1&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-1 text-center"&gt;sm-12 md-4 lg-1&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-1 text-center"&gt;sm-12 md-4 lg-1&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="row"&gt;
+                  &lt;div class="col sm-12 md-4 lg-4 text-center"&gt;sm-12 md-4 lg-4&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-4 text-center"&gt;sm-12 md-4 lg-4&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-4 text-center"&gt;sm-12 md-4 lg-4&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="row"&gt;
+                  &lt;div class="col sm-12 md-6 lg-3 text-center"&gt;sm-12 md-6 lg-3&lt;/div&gt;
+                  &lt;div class="col sm-12 md-6 lg-9 text-center"&gt;sm-12 md-6 lg-9&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="row"&gt;
+                  &lt;div class="col sm-12 md-2 lg-3 text-center"&gt;sm-12 md-2 lg-3&lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-3 text-center"&gt;sm-12 md-4 lg-3&lt;/div&gt;
+                  &lt;div class="col sm-12 md-3 lg-3 text-center"&gt;sm-12 md-3 lg-3&lt;/div&gt;
+                  &lt;div class="col sm-12 md-3 lg-3 text-center"&gt;sm-12 md-3 lg-3&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/main&gt;
+            </pre>
+          </div>
+        </div>
+        <span class="span bold">Resultado:</span>
+        <div class="row">
+          <div class="container example-02 column">
+            <div class="row">
+              <div class="col sm-12 md-4 lg-1 text-center">sm-12 md-4 lg-1</div>
+              <div class="col sm-12 md-4 lg-1 text-center">sm-12 md-4 lg-1</div>
+              <div class="col sm-12 md-4 lg-1 text-center">sm-12 md-4 lg-1</div>
+              <div class="col sm-12 md-4 lg-1 text-center">sm-12 md-4 lg-1</div>
+              <div class="col sm-12 md-4 lg-1 text-center">sm-12 md-4 lg-1</div>
+              <div class="col sm-12 md-4 lg-1 text-center">sm-12 md-4 lg-1</div>
+              <div class="col sm-12 md-4 lg-1 text-center">sm-12 md-4 lg-1</div>
+              <div class="col sm-12 md-4 lg-1 text-center">sm-12 md-4 lg-1</div>
+              <div class="col sm-12 md-4 lg-1 text-center">sm-12 md-4 lg-1</div>
+              <div class="col sm-12 md-4 lg-1 text-center">sm-12 md-4 lg-1</div>
+              <div class="col sm-12 md-4 lg-1 text-center">sm-12 md-4 lg-1</div>
+              <div class="col sm-12 md-4 lg-1 text-center">sm-12 md-4 lg-1</div>
+            </div>
+            <div class="row">
+              <div class="col sm-12 md-4 lg-4 text-center">sm-12 md-4 lg-4</div>
+              <div class="col sm-12 md-4 lg-4 text-center">sm-12 md-4 lg-4</div>
+              <div class="col sm-12 md-4 lg-4 text-center">sm-12 md-4 lg-4</div>
+            </div>
+            <div class="row">
+              <div class="col sm-12 md-6 lg-3 text-center">sm-12 md-6 lg-3</div>
+              <div class="col sm-12 md-6 lg-9 text-center">sm-12 md-6 lg-9</div>
+            </div>
+            <div class="row">
+              <div class="col sm-12 md-2 lg-3 text-center">sm-12 md-2 lg-3</div>
+              <div class="col sm-12 md-4 lg-3 text-center">sm-12 md-4 lg-3</div>
+              <div class="col sm-12 md-3 lg-3 text-center">sm-12 md-3 lg-3</div>
+              <div class="col sm-12 md-3 lg-3 text-center">sm-12 md-3 lg-3</div>
+            </div>
+          </div>
+        </div>
+        <span class="span bold" id="column-container">Contenedor Columna</span>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            También cuenta con un contenedor de columna el cual muestra su contenido de arriba hacía abajo, lo contrarío al contenedor de fila,
+            el cual muestra su contenido de izquierda a derecha, para usarlo basta con utilizar la clase <code>column</code> en lugar de <code>row</code> en un contenedor <code>&lt;div&gt;</code>.
+          </p>
+          <blockquote class="text-justify note">
+            <strong>Nota:&nbsp;</strong>Si quieres revertir la dirección en la que se muestra el
+            contenido tanto en contendor de columna como en el de fila, puedes usar la clase <code>reverse</code>, esto hará que por ejemplo,
+            en el contenedor de fila, su contenido se muestré de derecha a izquierda y no de izquierda a derecha a como normalmente lo hace.
+          </blockquote>
+        </div>
+        <span class="span bold">Ejemplo:</span>
+        <div class="row">
+          <div class="col sm-12 md-12 lg-12">
+            <pre>
+
+              &lt;div class="container"&gt;
+                &lt;div class="row"&gt;
+                  &lt;div class="column"&gt;
+                    &lt;div&gt;Item 1&lt;/div&gt;
+                    &lt;div&gt;Item 2&lt;/div&gt;
+                    &lt;div&gt;Item 3&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="column reverse"&gt; &lt;!-- Este mostrá primero el item 3, despues el item 2 y al final el item 1 --&gt;
+                    &lt;div&gt;Item 1&lt;/div&gt;
+                    &lt;div&gt;Item 2&lt;/div&gt;
+                    &lt;div&gt;Item 3&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </pre>
+          </div>
+        </div>
+        <span class="span bold">Resultado:</span>
+        <div class="row">
+          <div class="container example-03 column">
+            <div class="row">
+              <div class="column text-center">
+                <div class="col sm-12 md-6 lg-6">Item 1</div>
+                <div class="col sm-12 md-6 lg-6">Item 2</div>
+                <div class="col sm-12 md-6 lg-6">Item 3</div>
+              </div>
+              <div class="column reverse text-center"><!-- Este mostrá primero el item 3, despues el item 2 y al final el item 1 -->
+                <div class="col sm-12 md-6 lg-6">Item 1</div>
+                <div class="col sm-12 md-6 lg-6">Item 2</div>
+                <div class="col sm-12 md-6 lg-6">Item 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="only-mobile-or-desktop">
+        <h5 class="subtitle">Mostrar solo en moviles o Mostrar solo en Escritorio</h5>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            También existen unas clases con las cuales nosotros podremos decidir
+            que elementos mostrar según el dispositivo desde donde se visualiza el sitío.
+          </p>
+        </div>
+        <span class="span bold" id="only-mobile">Solo moviles</span>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            Para mostrar cierto contenido solo si se visualiza desde pantallas con resoluciones
+            igual o menores a 768px de ancho podemos usar la clase <code>show-only-mobile</code>, y
+            basicamente el contenido solo se mostrará en tabletas y Smartphones.
+          </p>
+        </div>
+        <span class="span bold" id="only-desktop">Solo escritorio</span>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            Para decir que contenido solo se debe mostrar en pantallas con resoluciones
+            mayores a 768px de ancho, podemos usar la clase <code>show-only-desktop</code>.
+          </p>
+        </div>
+        <span class="span bold">Ejemplo:</span>
+        <div class="row">
+          <div class="col sm-12 md-12 lg-12">
+            <pre>
+
+              &lt;div class="container"&gt;
+                &lt;div class="row"&gt;
+                  &lt;div class="col sm-12 md-12 lg-12"&gt;
+                    &lt;span class="show-only-mobile"&gt;Esto solo se vera en moviles&lt;/span&gt;
+                    &lt;span class="show-only-desktop"&gt;Esto solo se vera en pc's&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </pre>
+          </div>
+        </div>
+        <span class="span bold">Resultado:</span>
+        <div class="row">
+          <div class="container example-04 column">
+            <div class="row">
+              <div class="col sm-12 md-12 lg-12 text-center">
+                <span class="show-only-mobile">Esto solo se verá en moviles</span>
+                <span class="show-only-desktop">Esto solo se verá en pc's</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="nav-bar">
+        <h5 class="subtitle">Barra de navegación</h5>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            También cuenta con una barra de navegación ya lista, lo único que debemos
+            hacer es escribir la siguiente estructura:
+          </p>
+        </div>
+        <span class="span bold">Ejemplo:</span>
+        <div class="row">
+          <div class="col sm-12 md-12 lg-12">
+            <pre>
+
+              &lt;nav class="navbar"&gt;
+                &lt;a href="#" class="logo"&gt;Brand Logo&lt;/a&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Nosotros&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;FAQ&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/nav&gt;
+            </pre>
+          </div>
+        </div>
+        <span class="span bold">Resultado:</span>
+        <div class="row">
+          <nav class="navbar z-index-0">
+            <a href="#" class="logo">Brand Logo</a>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <span class="span"></span>
+        <div class="row">
+          <div class="col sm-12 md-12 lg-12 ">
+            <p class="text-justify">
+              Existen tres clases mas que le podemos agregar a la etiqueta
+              <code>&lt;nav&gt;</code>, estas clases son:
+            </p>
+            <ul class="nav-class">
+              <li><code>fixed</code>: Con esta clase podemos dejar la barra de navegación fija en la parte superior de la ventana.</li>
+              <li><code>gray</code>: Esta clase nos sirve para cambiar de color la barra de navegación a gris.</li>
+              <li><code>reverse</code>: Esta clase invierte la manera en la que se muestra el contenido dentro del <code>&lt;nav&gt;</code>.</li>
+            </ul>
+          </div>
+        </div>
+        <span class="span bold">Fixed:</span>
+        <div class="row">
+          <iframe src="examples/example-1.html" width="950" height="300"></iframe>
+        </div>
+        <span class="span bold">Gray:</span>
+        <div class="row">
+          <nav class="navbar gray z-index-0">
+            <a href="#" class="logo">Brand Logo</a>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <span class="span bold">Reverse:</span>
+        <div class="row">
+          <nav class="navbar reverse z-index-0">
+            <a href="#" class="logo">Brand Logo</a>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <span class="span"></span>
+        <div class="row">
+          <blockquote class="text-justify">
+            <strong>Nota:&nbsp;</strong>Si quieres utilizar la barra de navegación fija en la parte superior,
+            deberás dar padding superior al elemento que esté después del cierre de la barra
+            <code>&lt;nav&gt;</code> y recuerda que solo esta disponible en resoluciones mayores
+            a 600px de ancho.
+          </blockquote>
+        </div>
+      </section>
+      <section id="base-styles">
+        <h5 class="subtitle">Estilos base</h5>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            Si bien el Framework utiliza <em>normalize.css</em> para normalizar los estilos en
+            todos navegadores, también incluye algunos estilos base para ciertos elementos:
+          </p>
+        </div>
+        <span class="span bold" id="table">Tablas:</span>
+        <div class="row">
+          <table class="hover col sm-12 md-8 lg-12">
+            <thead>
+              <tr>
+                <th>Encabezado</th>
+                <th>Encabezado</th>
+                <th>Encabezado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>uno</td>
+                <td>dos</td>
+                <td>tres</td>
+              </tr>
+              <tr>
+                <td>uno</td>
+                <td>dos</td>
+                <td>tres</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <span class="span"></span>
+        <div class="row">
+          <blockquote>
+            <strong>Nota:&nbsp;</strong>Al elemento <code>&lt;table&gt;</code> puedes agregarle la clase hover, para resaltar la
+            fila en la que se pose el puntero del ratón.
+          </blockquote>
+        </div>
+        <span class="span bold" id="forms">Formularios:</span>
+        <span class="span">Inputs:</span>
+        <div class="row text-center">
+          <div class="col sm-12 md-6 lg-4">
+            <input type="text" name="name" placeholder="Type='text'">
+          </div>
+          <div class="col sm-12 md-6 lg-4">
+            <input type="password" name="name" placeholder="Type='password'">
+          </div>
+          <div class="col sm-12 md-12 lg-4">
+            <input type="number" name="name" placeholder="Type='number'">
+          </div>
+        </div>
+        <span class="span">Textarea:</span>
+        <div class="row">
+          <div class="col sm-12 md-12 lg-12">
+            <textarea name="name" rows="8" cols="40" placeholder="TextArea"></textarea>
+          </div>
+        </div>
+        <span class="span" id="buttons">Botones:</span>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            También existen unas clases para dar diferentes colores a los botones ya que por defecto
+            se muestran sin fondo, las clases son:
+          </p>
+        </div>
+        <div class="row text-center">
+          <div class="col sm-12 md-4 lg-4">
+            <div class="button">Botón DIV sin fondo</div>
+          </div>
+          <div class="col sm-12 md-4 lg-4">
+            <button class="button-teal">.button-teal</button>
+          </div>
+          <div class="col sm-12 md-4 lg-4">
+            <input class="button-gray" type="button" name="name" value=".button-gray">
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col sm-12 md-6 lg-6">
+            <input class="button-blue" type="submit" name="name" value=".button-blue">
+          </div>
+          <div class="col sm-12 md-6 lg-6">
+            <input class="button-green" type="reset" name="name" value=".button-green">
+          </div>
+        </div>
+        <span class="span"></span>
+        <div class="row">
+          <blockquote class="text-justify">
+            <strong>Nota:&nbsp;</strong>Si agregamos la clase <code>button</code> a un elemento <code>&lt;div&gt;</code>, este
+            tomará la apariencía de un botón.
+          </blockquote>
+        </div>
+        <span class="span bold" id="headers">Encabezados:</span>
+        <div class="row text-center">
+          <div class="col sm-12 md-12 lg-12">
+            <h1>Encabezado h1</h1>
+          </div>
+          <div class="col sm-12 md-12 lg-12">
+            <h2>Encabezado h2</h2>
+          </div>
+          <div class="col sm-12 md-12 lg-12">
+            <h3>Encabezado h3</h3>
+          </div>
+          <div class="col sm-12 md-12 lg-12">
+            <h4>Encabezado h4</h4>
+          </div>
+          <div class="col sm-12 md-12 lg-12">
+            <h5>Encabezado h5</h5>
+          </div>
+          <div class="col sm-12 md-12 lg-12">
+            <h6>Encabezado h6</h6>
+          </div>
+        </div>
+        <span class="span bold" id="lists-link">Listas:</span>
+        <span class="span">Lista desordenada:</span>
+        <div class="row">
+          <div class="col sm-12 md-11 lg-11">
+            <ul>
+              <li>Elemento 1</li>
+              <li>Elemento 2
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                </ul>
+              </li>
+              <li>Elemento 3</li>
+              <li>Elemento 4</li>
+            </ul>
+          </div>
+        </div>
+        <span class="span">Lista ordenada:</span>
+        <div class="row">
+          <div class="col sm-12 md-11 lg-11">
+            <ol>
+              <li>Elemento 1</li>
+              <li>Elemento 2
+                <ol>
+                  <li>1</li>
+                  <li>2</li>
+                </ol>
+              </li>
+              <li>Elemento 3</li>
+              <li>Elemento 4</li>
+            </ol>
+          </div>
+        </div>
+        <span class="span bold" id="anchor">Anchor:</span>
+        <div class="row">
+          <div class="col sm-12 md-3 lg-3">
+            <a href="#">Este es un hypervínculo</a>
+          </div>
+          <div class="col sm-12 md-3 lg-3">
+            <a href="#">Este es un hypervínculo</a>
+          </div>
+          <div class="col sm-12 md-3 lg-3">
+            <a href="#">Este es un hypervínculo</a>
+          </div>
+          <div class="col sm-12 md-3 lg-3">
+            <a href="#">Este es un hypervínculo</a>
+          </div>
+        </div>
+      </section>
+      <section id="align-text-classes">
+        <h5 class="subtitle">Clases para alinear texto</h5>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            El framework incluye cuatro clases que nos permiten alinear el texto de una manera
+            más fácil, estas clases son:
+          </p>
+        </div>
+        <div class="row">
+          <div class="col sm-12 md-11 lg-11">
+            <ul style="list-style:none;">
+              <li><code>text-left</code>: Esta clase muestra el texto a la izquierda.</li>
+              <li><code>text-center</code>: Esta clase muestra el texto en el centro.</li>
+              <li><code>text-right</code>: Esta clase muestra el texto a la derecha.</li>
+              <li><code>text-justify</code>: Esta clase muestra el texto justificado.</li>
+            </ul>
+          </div>
+        </div>
+        <span class="span bold">Ejemplo:</span>
+        <div class="row">
+          <div class="col sm-12 md-3 lg-3">
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;Clase:&nbsp;&nbsp;<code>text-left</code></span>
+            <hr>
+            <p class="text-left">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="col sm-12 md-3 lg-3">
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;Clase:&nbsp;&nbsp;<code>text-center</code></span>
+            <hr>
+            <p class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="col sm-12 md-3 lg-3">
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;Clase:&nbsp;&nbsp;<code>text-right</code></span>
+            <hr>
+            <p class="text-right">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="col sm-12 md-3 lg-3">
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;Clase:&nbsp;&nbsp;<code>text-justify</code></span>
+            <hr>
+            <p class="text-justify">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="float-classes">
+        <h5 class="subtitle">Elementos flotantes</h5>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            También existen tres clases para los elementos flotantes, estas son:
+          </p>
+        </div>
+        <div class="row">
+          <div class="col sm-12 md-11 lg-11">
+            <ul style="list-style:none;">
+              <li><code>left</code>: Flotar elementos hacía la izquierda.</li>
+              <li><code>right</code>: Flotar elementos hacía la derecha.</li>
+              <li><code>clear</code>: Le agrega la propiedad <code>clear:both;</code> de <em>CSS</em>.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <secttion id="z-index">
+        <h5 class="subtitle">Z index</h5>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            Podremos también implementar cinco clases que nos podrán ayudar a definir el index
+            de los elementos en el eje Z, estas clases son:
+          </p>
+        </div>
+        <div class="row">
+          <div class="col sm-12 md-11 lg-11">
+            <ul>
+              <li><code>z-index-0</code></li>
+              <li><code>z-index-1</code></li>
+              <li><code>z-index-2</code></li>
+              <li><code>z-index-3</code></li>
+              <li><code>z-index-4</code></li>
+            </ul>
+          </div>
+        </div>
+      </secttion>
+      <section id="footer-section">
+        <h5 class="subtitle">Pie de página</h5>
+        <div class="row">
+          <p class="col sm-12 md-12 lg-12 text-justify">
+            Por último el framework también cuenta con un pie de página listo para ser usado,
+            unicamente tenemos que utilizar la siguiente estructura en el documento HTML:
+          </p>
+        </div>
+        <span class="span bold">Ejemplo:</span>
+        <div class="row">
+          <div class="col sm-12 md-12 lg-12">
+            <pre>
+              &lt;footer&gt;
+                &lt;section class="row"&gt;
+                  &lt;div class="col sm-12 md-4 lg-4"&gt;
+                    &lt;span&gt;Noticias&lt;/span&gt;
+                    &lt;input type="text"placeholder="Suscribete"&gt;
+                    &lt;div class="button button-teal"&gt;Enviar&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-4"&gt;
+                    &lt;span&gt;Lorem ipsum&lt;/span&gt;
+                    &lt;p class="text-justify"&gt;
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class="col sm-12 md-4 lg-4"&gt;
+                    &lt;span&gt;Social Media&lt;/span&gt;
+                    &lt;ul class=""&gt;
+                      &lt;li&gt;&lt;a href="#"&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="#"&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="#"&gt;Instagram&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="#"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;
+                &lt;/section&gt;
+                &lt;section class="row"&gt;
+                  &lt;span&gt;Copyright &copy; 2016 Copyright Holder All Rights Reserved.&lt;/span&gt;
+                &lt;/section&gt;
+              &lt;/footer&gt;
+            </pre>
+          </div>
+        </div>
+        <span class="span bold">Resultado:</span>
+        <footer>
+          <section class="row">
+            <div class="col sm-12 md-4 lg-4">
+              <span>Noticias</span>
+              <input type="text"placeholder="Suscribete">
+              <div class="button button-teal">Enviar</div>
+            </div>
+            <div class="col sm-12 md-4 lg-4">
+              <span>Lorem ipsum</span>
+              <p class="text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <div class="col sm-12 md-4 lg-4">
+              <span>Social Media</span>
+              <ul class="">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">GitHub</a></li>
+              </ul>
+            </div>
+          </section>
+          <section class="row">
+            <span>Copyright &copy; 2016 Copyright Holder All Rights Reserved.</span>
+          </section>
+        </footer>
+      </section>
+      <span class="span"></span>
+    </main>
+
+    <aside class="show-only-desktop">
+      <ul>
+        <li>
+          <a href="#main-container">Contenedor principal</a>
+          <li><a href="#grid-system">Grid de 12 columnas</a></li>
+          <ul>
+            <li><a href="#row-container">Contenedor fila</a></li>
+            <li><a href="#column-container">Contenedor Columna</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#only-mobile-or-desktop">Mostrar solo en moviles o Mostrar solo en escritorio</a>
+          <ul>
+            <li><a href="#only-mobile">Mostrar solo moviles</a></li>
+            <li><a href="#only-desktop">Mostrar solo escritorio</a></li>
+          </ul>
+        </li>
+        <li><a href="#nav-bar">Barra de navegación</a></li>
+        <li>
+          <a href="#base-styles">Estilos base</a>
+          <ul>
+            <li><a href="#table">Estilos de tablas</a></li>
+            <li><a href="#forms">Elementos de formularios</a></li>
+            <li><a href="#buttons">Botones</a></li>
+            <li><a href="#headers">Encabezados</a></li>
+            <li><a href="#lists-link">Listas</a></li>
+            <li><a href="#anchor">Anchor</a></li>
+          </ul>
+        </li>
+        <li><a href="#align-text-classes">Clases para alinear texto</a></li>
+        <li><a href="#float-classes">Clases para Flotar objetos</a></li>
+        <li><a href="#z-index">Clases z-index</a></li>
+        <li><a href="#footer-section">Pie de página</a></li>
+      </ul>
+    </aside>
+  </div>
+
+</body>
+</html>
